@@ -1,0 +1,51 @@
+<div ng-if="!kullanici">
+
+  <div class="card kart_yazi yazi_17">
+  <div class="item item-text-wrap ">
+    Merhaba, yemekteyiz uygulamıza hoş gedin. İsminiz öğrene bilir miyiz?
+  </div>
+</div>
+
+
+
+<div class="list list-inset ortala">
+  <img width= "74%" src="https://cdn.dribbble.com/users/788099/screenshots/9072313/media/62b695bb257c7d6d872c46205ac5c7d7.png">
+  <label class="item item-input">
+    <input type="text" placeholder="Adınız?" ng-model="ad">
+  </label>
+
+<button class="button button-block button-royal" ng-click="isimAl(ad)">
+ Başla
+</button>
+
+
+</div>
+
+
+
+</div>
+
+<div class="list list-inset">
+  <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="text" placeholder="ne aramıştın?" ng-model="kelime">
+  </label>
+</div>
+
+
+
+
+  <div class="card" ng-if="kelime && sonuc.length>0">
+  <div class="item item-text-wrap">
+    <b>"{{kelime}}"</b> kelimesine ait {{sonuc.length}} sonuç bulundu...
+  </div>
+</div>
+
+
+  <div class="card" ng-if="kelime && sonuc.length==0">
+  <div class="item item-text-wrap">
+    <b>"{{kelime}}"</b> kelimesine ait  sonuç bulunamadı!
+  </div>
+</div>
+
+
